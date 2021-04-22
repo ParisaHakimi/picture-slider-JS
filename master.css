@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .show-image {
+    width: 100%;
+    height: 400px;
+}
+
+.wrapper .show-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.small-images-wrapper {
+    display: flex;
+    margin: 0 -5px;
+}
+
+.small-images-wrapper img {
+    width: 50px;
+    flex-grow: 1;
+    margin: 5px;
+}
+
+.small-images-wrapper img:not(.selected) {
+    filter: brightness(60%);
+}
